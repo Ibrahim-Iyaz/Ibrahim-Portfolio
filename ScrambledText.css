@@ -1,0 +1,57 @@
+.scrambled-text {
+  position: relative;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.scrambled-text-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.scrambled-text p {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.scrambled-word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.scrambled-space {
+  display: inline;
+  white-space: normal;
+}
+
+.scrambled-char {
+  position: relative;
+  display: inline-block;
+  white-space: pre;
+}
+
+.scrambled-char-sizer {
+  visibility: hidden;
+}
+
+.scrambled-char-glyph {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: pre;
+  transition: color 0.15s ease;
+}
+

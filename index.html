@@ -1,0 +1,1208 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f2f0e9">
+  <meta name="description"
+    content="The portfolio of Ibrahim Iyaz, a software engineer building web and desktop solutions.">
+  <meta property="og:title" content="Ibrahim Iyaz | Software Engineer">
+  <meta property="og:description" content="Web, systems and visual craft. Done by Ibrahim Iyaz.">
+  <meta property="og:type" content="website">
+  <title>Ibrahim's Portfolio</title>
+  <link rel="icon" type="image/webp" href="assets/logo.webp">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Onest:wght@400;500;600;700;800&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Saira:wdth,wght@50..125,100..900&family=Saira+Condensed:wght@500;600;700&display=swap"
+    rel="stylesheet">
+  
+  <link href="https://db.onlinewebfonts.com/c/8cb707a9b8a73f8a7403336b861c3074?family=BubbledotICG-FinePos"
+    rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="lanyard.css">
+  <link rel="stylesheet" href="ScrambledText.css">
+  <script>
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+  </script>
+  <script src="vendor/three.min.js" defer></script>
+  <script src="vendor/ogl.umd.js" defer></script>
+  <script src="magic-rings.js" defer></script>
+  <script src="true-focus.js" defer></script>
+  <script src="preloader.js" defer></script>
+  <script src="microslats.js" defer></script>
+  <script src="variable-proximity.js" defer></script>
+  <script src="glass-icons.js" defer></script>
+  <script src="curved-loop.js" defer></script>
+  <script src="border-glow.js" defer></script>
+  <script src="dock.js" defer></script>
+  <script src="lanyard.js" defer></script>
+  <script src="scrambled-text.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  
+  <aside id="portfolioPreloader" class="portfolio-preloader" aria-label="Loading portfolio experience">
+    
+    <div id="magicRingsContainer" class="magic-rings preloader-rings" aria-hidden="true">
+      <canvas id="magicRingsCanvas" class="magic-rings__canvas"></canvas>
+    </div>
+
+    <div class="preloader-content">
+      <div class="preloader-eyebrow">
+        <span class="preloader-dot"></span> SYSTEM INITIALIZATION
+      </div>
+
+      <div id="preloaderTrueFocus" class="focus-container preloader-focus"></div>
+
+      <div class="preloader-meter-wrap">
+        <div class="preloader-meter">
+          <div class="preloader-meter-fill" id="preloaderMeterFill"></div>
+        </div>
+        <div class="preloader-stats">
+          <span class="preloader-substatus" id="preloaderSubstatus">CALIBRATING THE CORE SYSTEMS...</span>
+          <span class="preloader-percent" id="preloaderPercent">00%</span>
+        </div>
+      </div>
+
+      <button type="button" class="preloader-skip" id="preloaderSkipBtn" aria-label="Enter portfolio site">
+        <span>ENTER SITE</span>
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M4 10h11m-4-4 4 4-4 4"></path>
+        </svg>
+      </button>
+    </div>
+  </aside>
+
+  <div id="microSlatsBg" class="micro-slats micro-slats-bg" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-progress" aria-hidden="true"><span id="pageProgress"></span></div>
+
+  <header class="site-header" role="banner">
+    <div class="header-side-spacer" aria-hidden="true"></div>
+    <a class="brand" href="#top" aria-label="Ibrahim Iyaz, home">
+      <div class="brand-logo-wrap">
+        <img class="brand-logo-img" src="assets/logo.webp" alt="Ibrahim Iyaz Logo" width="36" height="36">
+      </div>
+      <div class="brand-info">
+        <span class="brand-name">IBRAHIM IYAZ<small>SOFTWARE ENGINEER</small></span>
+      </div>
+    </a>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme"
+        aria-pressed="false">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="3.5"></circle>
+          <path
+            d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42">
+          </path>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20.2 15.1A8.5 8.5 0 0 1 8.9 3.8 8.6 8.6 0 1 0 20.2 15.1Z"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section-shell" id="top" aria-labelledby="heroTitle">
+      <div class="hero-copy" data-scroll="slide-left">
+        <p class="eyebrow"><span class="eyebrow-mark" aria-hidden="true"></span>Gujranwala, Pakistan <span
+            class="eyebrow-separator">/</span>Lowkey cooking</p>
+        <h1 id="heroTitle">I make software<br>feel <span class="hero-word">alive<span
+              class="hero-period">.</span></span></h1>
+        <p class="hero-intro"><b> I’m Ibrahim Iyaz. I make stuff. It’s kinda my thing..</b> <br> bro got a keyboard and
+          vision
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">Explore selected work<svg viewBox="0 0 20 20"
+              aria-hidden="true">
+              <path d="M4 10h11m-4-4 4 4-4 4"></path>
+            </svg></a>
+          <a class="text-link" href="mailto:ibrahimiyaz567@yahoo.com">Start a conversation <span
+              aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="hero-art hero-art-lanyard" data-scroll="zoom-in" role="region"
+        aria-label="Interactive 3D lanyard badge with physics simulation">
+        <div class="lanyard" id="heroLanyard" data-front-image="assets/card-front.webp"
+          data-back-image="assets/card-back.webp" data-strap-image="assets/band.webp" data-size="0.64"
+          data-strap-width="1" data-gravity="0.55" data-breeze="0.6" data-finish="glossy" data-metal="silver"
+          data-card-color="#f5f2eb">
+        </div>
+        <div class="art-coordinate art-coordinate-top" data-parallax-speed="0.25" aria-hidden="true"
+          style="font-size: 40px;">✧</div>
+        <div class="art-coordinate art-coordinate-bottom" data-parallax-speed="-0.2" aria-hidden="true">DEV
+          PASS<br>JS GOT INTERACTIVE</div>
+        <div class="art-caption"><span class="caption-line"></span><span>DRAG TO TOSS • CLICK TO FLIP</span></div>
+      </div>
+      <div class="hero-foot" data-scroll="fade-up"><span>Developer by class. Locked in by lore... hehe</span><a
+          href="#work" class="scroll-cue">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a></div>
+    </section>
+
+    <section class="signal-strip" id="signalStrip" data-scroll="fade-up" aria-label="Areas of focus">
+      <div class="signal-strip-loop" data-curved-loop data-shape="line" data-speed="0" data-font-size="19"
+        data-letter-spacing="2.2" data-separator="✦">
+        <div class="signal-strip-inner"><span>WEB EXPERIENCES</span><i aria-hidden="true"></i><span>SOFTWARE
+            SYSTEMS</span><i aria-hidden="true"></i><span>VISUAL CRAFT</span><i aria-hidden="true"></i><span>CARE IN THE
+            DETAILS</span></div>
+      </div>
+    </section>
+
+    <section class="work section-shell section-space" id="work" aria-labelledby="workTitle">
+      <div class="section-heading" data-scroll="fade-up">
+        <div>
+          <p class="section-index"><span>01</span> / SELECTED WORK</p>
+          <h2 id="workTitle">Built with <em>intent.</em></h2>
+        </div>
+        <p class="section-aside">the things I cooked up..!<br> chat did i cook?</p>
+      </div>
+
+      <article class="project project-feature" data-scroll="zoom-in">
+        <div class="project-visual solar-visual interactive-card-stage" id="solarVisualStage"
+          aria-label="Interactive SolarIQ Telemetry Card">
+          <div class="solar-card interactive-tilt-card" id="solarCard">
+            <div class="solar-card-top">
+              <span class="solar-badge"><i class="pulse-dot"></i> LIVE TELEMETRY</span>
+              <span class="solar-api-tag">SOLARMAN API · INVERTER 01</span>
+            </div>
+            <div class="solar-metrics-grid">
+              <button type="button" class="solar-metric-pill metric-active" data-metric="gen"
+                title="Click to view Solar Generation details">
+                <small>GENERATION</small>
+                <strong id="solarGenVal">4.82 kW</strong>
+                <span class="metric-indicator gen-ind"></span>
+              </button>
+              <button type="button" class="solar-metric-pill" data-metric="load"
+                title="Click to view Household Load details">
+                <small>LOAD</small>
+                <strong id="solarLoadVal">2.15 kW</strong>
+                <span class="metric-indicator load-ind"></span>
+              </button>
+              <button type="button" class="solar-metric-pill" data-metric="battery"
+                title="Click to view Battery Status">
+                <small>BATTERY</small>
+                <strong id="solarBatVal">94%</strong>
+                <span class="metric-indicator bat-ind"></span>
+              </button>
+              <button type="button" class="solar-metric-pill" data-metric="grid"
+                title="Click to view Net Metering Grid export">
+                <small>NET GRID</small>
+                <strong id="solarGridVal">+2.67 kW</strong>
+                <span class="metric-indicator grid-ind"></span>
+              </button>
+            </div>
+            <div class="solar-flow-track" aria-hidden="true">
+              <span class="flow-node flow-solar" title="Solar Array">☀️</span>
+              <div class="flow-stream"><i class="flow-particle p1"></i><i class="flow-particle p2"></i><i
+                  class="flow-particle p3"></i></div>
+              <span class="flow-node flow-battery" title="Battery Storage">🔋</span>
+              <div class="flow-stream"><i class="flow-particle p4"></i><i class="flow-particle p5"></i></div>
+              <span class="flow-node flow-home" title="Household Load">🏠</span>
+            </div>
+            <div class="solar-tariff-bar">
+              <span id="solarTariffStatus">GEPCO / LESCO / K-ELECTRIC TARIFF ENGINE</span>
+              <div class="solar-progress-line"><i id="solarProgressBar" style="width: 68%"></i></div>
+              <small id="solarTariffTag">NET-METERING ACTIVE (CLICK TO TOGGLE)</small>
+            </div>
+          </div>
+          <span class="visual-index">FINAL YEAR PROJECT / 01</span>
+          <span class="visual-orbit"></span>
+        </div>
+        <div class="project-copy">
+          <div class="project-topline">
+            <span>01 / FINAL YEAR PROJECT</span>
+            <span class="project-status"><i></i> REACT NATIVE / ML</span>
+          </div>
+          <h3>SolarIQ</h3>
+          <p>A solar monitoring, billing &amp; analytics platform that consolidates solar generation, household load,
+            grid import/export and battery status into a single dashboard integrating live inverter data through the
+            SOLARMAN API.</p>
+          <ul class="tag-list" data-scroll="stagger" aria-label="Technologies">
+            <li>React Native</li>
+            <li>Node.js</li>
+            <li>Express</li>
+            <li>MongoDB</li>
+            <li>Python</li>
+            <li>TensorFlow</li>
+            <li>SOLARMAN API</li>
+            <li>LLaMA AI</li>
+          </ul>
+          <details class="project-details">
+            <summary>Open project notes &amp; architecture <span aria-hidden="true">+</span></summary>
+            <div class="details-content">
+              <p>• Built a mobile platform that consolidates solar generation, household load, grid import/export and
+                battery status into a single dashboard, integrating live inverter data through the SOLARMAN API.</p>
+              <p>• Implemented an electricity bill estimation engine covering utility tariff slabs, time-of-use billing
+                and net-metering data for Pakistani utilities (GEPCO, LESCO, K-Electric).</p>
+              <p>• Developed OCR-based meter reading, ML battery forecasting, alerts, PDF/CSV reporting and a
+                LLaMA-based AI assistant for solar queries.</p>
+              <p class="detail-stack">FOCUS <span>Live inverter telemetry, utility tariffs, edge OCR &amp; LLaMA
+                  assistant</span></p>
+            </div>
+          </details>
+        </div>
+      </article>
+
+      <div class="project-list">
+        
+        <article class="project project-row" data-scroll="slide-left">
+          <div class="project-row-number">02</div>
+          <div class="project-row-art gesture-visual interactive-card-stage" id="gestureVisualStage"
+            aria-label="Interactive Gesture Holographic Cube">
+            <div class="gesture-cube interactive-tilt-card" id="gestureCubeCard">
+              <div class="gesture-topbar">
+                <span class="gesture-chip"><i class="chip-dot"></i> DUAL HAND</span>
+                <small id="gestureLandmarks">21+21 LANDMARKS</small>
+              </div>
+              <div class="cube-stage">
+                <div class="cube-wireframe" id="cubeWireframe">
+                  <span class="cube-node node-1"></span>
+                  <span class="cube-node node-2"></span>
+                  <span class="cube-node node-3"></span>
+                  <span class="cube-node node-4"></span>
+                  <div class="cube-glow" id="cubeGlow"></div>
+                </div>
+              </div>
+              <div class="gesture-meta">
+                <span class="gesture-sub">ACTIVE SHADER WORLD (CLICK TO CYCLE)</span>
+                <strong id="gestureShaderTag">60 FPS GLSL · GALAXY</strong>
+              </div>
+            </div>
+            <span class="web-corner">CV &amp; SHADERS</span>
+          </div>
+          <div class="project-row-copy">
+            <p class="project-kicker">COMPUTER VISION &amp; GRAPHICS</p>
+            <h3>Gesture-Controlled Spatial Effects Engine</h3>
+            <p>A real-time computer vision application that tracks both hands (21 landmarks each) and renders an
+              interactive holographic 3D cube between them using OpenGL and GLSL shaders.</p>
+            <ul class="tag-list" data-scroll="stagger" aria-label="Technologies">
+              <li>Python</li>
+              <li>MediaPipe</li>
+              <li>OpenCV</li>
+              <li>NumPy</li>
+              <li>PyOpenGL</li>
+              <li>GLFW</li>
+              <li>GLSL</li>
+            </ul>
+            <details class="project-details">
+              <summary>Project notes <span aria-hidden="true">+</span></summary>
+              <div class="details-content">
+                <p>• Real-time dual-hand tracking (21 landmarks each) rendering an interactive holographic 3D cube
+                  between hands using OpenGL and GLSL shaders.</p>
+                <p>• Implemented 10+ gesture types with exponential landmark smoothing and velocity estimation for
+                  stable tracking, plus 6 shader-driven effect worlds (galaxy, fire portal, matrix rain and others).</p>
+                <p>• Engineered a modular pipeline separating camera capture, tracking, gesture recognition, spatial
+                  interaction and rendering.</p>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <article class="project project-row" data-scroll="slide-right">
+          <div class="project-row-number">03</div>
+          <div class="project-row-art quran-visual interactive-card-stage" id="quranVisualStage"
+            aria-label="Interactive QuranApp Desktop Window">
+            <div class="quran-window interactive-tilt-card" id="quranWindow">
+              <div class="window-top">
+                <span class="window-dots"><i class="dot-red" title="Close"></i><i class="dot-yellow"
+                    title="Minimize"></i><i class="dot-green" title="Expand"></i></span>
+                <span id="quranHeaderTitle">QURAN / TAURI</span>
+                <span class="window-menu" id="quranMenuBtn" title="Click to cycle Reciters">•••</span>
+              </div>
+              <div class="quran-layout">
+                <div class="quran-rail" role="tablist" aria-label="QuranApp views">
+                  <button type="button" class="quran-rail-btn" data-view="index" title="Surah Index">Q</button>
+                  <button type="button" class="quran-rail-btn rail-active" data-view="reader"
+                    title="Reader View">⌂</button>
+                  <button type="button" class="quran-rail-btn" data-view="audio"
+                    title="Audio Player (320kbps)">♫</button>
+                  <button type="button" class="quran-rail-btn" data-view="bookmarks" title="Bookmarks">▤</button>
+                  <button type="button" class="quran-rail-btn" data-view="settings" title="Rust Settings">⚙</button>
+                </div>
+                <div class="quran-page" id="quranPageContent">
+                  <div class="quran-page-meta"><span id="quranMetaSurah">02 / AL-BAQARAH</span><span
+                      id="quranMetaStatus">◉ SAVED</span></div>
+                  <p class="arabic-line interactive-arabic" id="quranArabicLine" lang="ar" dir="rtl"
+                    title="Click or hover to reveal English translation">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+                  <p class="arabic-translation" id="quranTranslation">In the name of Allah, the Entirely Merciful, the
+                    Especially Merciful.</p>
+                  <div class="quran-rule"></div>
+                  <div class="quran-reader-status" id="quranStatusRow">
+                    <span class="reader-chip" id="quranChip">◈ RUST PROTOCOL</span>
+                    <div class="reader-progress-track"><i id="quranAudioTrack" style="width: 44%"></i></div>
+                    <small id="quranProtocolBadge">SHA-256 VERIFIED</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span class="visual-index">OFFLINE FIRST</span>
+          </div>
+          <div class="project-row-copy">
+            <p class="project-kicker">OFFLINE-FIRST DESKTOP APPLICATION</p>
+            <h3>QuranApp</h3>
+            <p>An offline-first Quran desktop app built in Tauri and Rust, streaming local high-bitrate recitations
+              through a custom "quran-audio://" protocol handler.</p>
+            <ul class="tag-list" data-scroll="stagger" aria-label="Technologies">
+              <li>Tauri (Rust)</li>
+              <li>React</li>
+              <li>TypeScript</li>
+              <li>Vite</li>
+              <li>Python</li>
+              <li>Custom URI Protocol</li>
+            </ul>
+            <details class="project-details">
+              <summary>Project notes <span aria-hidden="true">+</span></summary>
+              <div class="details-content">
+                <p>• Built an offline-first Quran desktop app in Tauri and Rust, streaming local high-bitrate
+                  recitations through a custom "quran-audio://" protocol handler, with multi-reciter support, playlists,
+                  bookmarks, search and exact-position resume after restart.</p>
+                <p>• Implemented Bismillah audio sequencing across all 114 Surahs, handling the Surah 1 and Surah 9 edge
+                  cases.</p>
+                <p>• Added Python validation suites that verify SHA-256 hashes of the source text to prevent corruption.
+                </p>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <article class="project project-row" data-scroll="slide-left">
+          <div class="project-row-number">04</div>
+          <div class="project-row-art ipod-visual interactive-card-stage" id="ipodVisualStage"
+            aria-label="Interactive Retro iPod Click Wheel">
+            <div class="ipod-device interactive-tilt-card" id="ipodDevice">
+              <div class="ipod-screen">
+                <div class="ipod-screen-top"><span id="ipodAppTag">iPodify</span><span id="ipodBattery">● 100%</span>
+                </div>
+                <strong id="ipodTrackTitle">Starboy</strong>
+                <small id="ipodArtistTag">The Weeknd · Spotify</small>
+              </div>
+              <div class="ipod-wheel" id="ipodWheel" title="Click controls or drag wheel">
+                <button type="button" class="wheel-btn menu-btn" id="ipodMenuBtn" title="Menu">MENU</button>
+                <button type="button" class="wheel-btn prev-btn" id="ipodPrevBtn" title="Previous Track">|◀◀</button>
+                <button type="button" class="wheel-btn next-btn" id="ipodNextBtn" title="Next Track">▶▶|</button>
+                <button type="button" class="wheel-btn play-btn" id="ipodPlayBtn" title="Play / Pause">▶||</button>
+                <button type="button" class="wheel-center" id="ipodCenterBtn" title="Select / Next"></button>
+              </div>
+            </div>
+            <span class="web-corner">SWIFTUI &amp; RN</span>
+          </div>
+          <div class="project-row-copy">
+            <p class="project-kicker">RETRO SPOTIFY MUSIC PLAYER</p>
+            <h3>iPodify</h3>
+            <p>An iOS and cross-platform music player built around the classic click-wheel iPod interaction model,
+              integrated with Spotify through OAuth/PKCE authentication.</p>
+            <ul class="tag-list" data-scroll="stagger" aria-label="Technologies">
+              <li>Swift</li>
+              <li>SwiftUI</li>
+              <li>SwiftData</li>
+              <li>Spotify Web API</li>
+              <li>OAuth/PKCE</li>
+              <li>React Native</li>
+              <li>Expo SDK 57</li>
+              <li>TypeScript</li>
+              <li>Reanimated 4</li>
+              <li>Zustand</li>
+            </ul>
+            <details class="project-details">
+              <summary>Project notes <span aria-hidden="true">+</span></summary>
+              <div class="details-content">
+                <p>• Developed an iOS music player built around the classic click-wheel iPod interaction model,
+                  integrated with Spotify through OAuth/PKCE authentication.</p>
+                <p>• Implemented search indexing, REST API integration, custom themes and tactile haptic interaction in
+                  a retro-inspired SwiftUI interface.</p>
+                <p>• Implemented across both native Swift/SwiftUI and React Native with Expo SDK 57 and Reanimated 4.
+                </p>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <article class="project project-row" data-scroll="slide-right">
+          <div class="project-row-number">05</div>
+          <div class="project-row-art weather-visual interactive-card-stage" id="weatherVisualStage"
+            aria-label="Interactive Weather Card">
+            <div class="weather-card-ui interactive-tilt-card" id="weatherCardUI"
+              title="Click to cycle weather conditions (Sunny / Rain / Night)">
+              <div class="weather-top"><span id="weatherLoc">CURRENT LOCATION</span><strong
+                  id="weatherTemp">28°C</strong></div>
+              <div class="weather-art-sun" id="weatherIconSun"></div>
+              <div class="weather-meta-row"><span id="weatherStateTag">SUNNY · CLEAR SKY</span><small
+                  id="weatherUnitToggle">CLICK TO CYCLE</small></div>
+            </div>
+            <span class="web-corner">MOBILE &amp; WEB</span>
+          </div>
+          <div class="project-row-copy">
+            <p class="project-kicker">WEATHER APP (MOBILE &amp; WEB)</p>
+            <h3>WeatherIQ</h3>
+            <p>A cross-platform mobile and web weather app with GPS auto-detection, hourly and 7-day forecasts and
+              dynamic gradient backgrounds that adapt to live weather.</p>
+            <ul class="tag-list" data-scroll="stagger" aria-label="Technologies">
+              <li>React Native (Expo)</li>
+              <li>TypeScript</li>
+              <li>TanStack React Query</li>
+              <li>React 19</li>
+              <li>Vite</li>
+              <li>Open-Meteo API</li>
+            </ul>
+            <details class="project-details">
+              <summary>Project notes <span aria-hidden="true">+</span></summary>
+              <div class="details-content">
+                <p>• Built a cross-platform mobile weather app with GPS auto-detection, hourly and 7-day forecasts and
+                  gradient backgrounds that change with weather conditions and time of day.</p>
+                <p>• Managed server state with TanStack React Query for caching and background refetching, with
+                  pull-to-refresh and Lottie animations.</p>
+                <p>• Shipped a companion React 19 web app with glassmorphism UI, browser geolocation and Nominatim
+                  reverse geocoding.</p>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <article class="project project-row" data-scroll="slide-left">
+          <div class="project-row-number">06</div>
+          <div class="project-row-art railway-visual" aria-hidden="true">
+            <div class="railway-ticket">
+              <span>ROUTE / 01</span>
+              <div class="route-line"><i></i><b></b><i></i></div>
+              <strong>BOOK A JOURNEY</strong>
+              <small>JAZZCASH GATEWAY &bull; SEAT RESERVATION</small>
+            </div>
+            <div class="ticket-cut"></div>
+            <span class="web-corner">JAZZCASH API</span>
+          </div>
+          <div class="project-row-copy">
+            <p class="project-kicker">FULL-STACK WEB APPLICATION</p>
+            <h3>Full-Stack Railway Ticket Booking System</h3>
+            <p>A ticket-booking platform built from the interface through to the database layer, with passenger
+              authentication, route search and JazzCash payment integration.</p>
+            <ul class="tag-list" data-scroll="stagger" aria-label="Technologies">
+              <li>PHP</li>
+              <li>MySQL</li>
+              <li>Tailwind CSS</li>
+              <li>JavaScript</li>
+              <li>JazzCash API</li>
+            </ul>
+            <details class="project-details">
+              <summary>Project notes <span aria-hidden="true">+</span></summary>
+              <div class="details-content">
+                <p>• Developed a train booking platform with passenger authentication, train search by route/date/class,
+                  seat booking and ticket generation.</p>
+                <p>• Integrated a wallet-based payment system with the JazzCash payment gateway, plus
+                  refund/cancellation flows and an admin dashboard for bookings and schedules.</p>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <article class="project project-row" data-scroll="zoom-in">
+          <div class="project-row-number">07</div>
+          <div class="project-row-art puzzle-visual" aria-label="Just One More Room 3D Puzzle Game Visual">
+            <div class="puzzle-room-card">
+              <div class="puzzle-topline">
+                <span>ROOM 06 / ESCAPE</span>
+                <span class="puzzle-badge">UNITY 6 &bull; URP</span>
+              </div>
+              <div class="puzzle-chamber">
+                <div class="puzzle-door-frame">
+                  <div class="puzzle-door">
+                    <div class="puzzle-glyph">◈</div>
+                    <div class="puzzle-lock"></div>
+                  </div>
+                </div>
+                <div class="puzzle-light-beam"></div>
+              </div>
+              <div class="puzzle-meta">
+                <span>PROBUILDER &bull; C#</span>
+                <small>6-LEVEL ESCAPE ARCHITECTURE</small>
+              </div>
+            </div>
+            <span class="web-corner">3D PUZZLE GAME</span>
+          </div>
+          <div class="project-row-copy">
+            <p class="project-kicker">FIRST-PERSON PUZZLE GAME (UNITY 6 &bull; C#)</p>
+            <h3>Just One More Room</h3>
+            <p>A 6-level first-person escape puzzle game built in Unity 6 and C# with Universal Render Pipeline (URP),
+              ProBuilder level architecture, interactive puzzle triggers and psychological challenge flow.</p>
+            <ul class="tag-list" data-scroll="stagger" aria-label="Technologies">
+              <li>Unity 6</li>
+              <li>C#</li>
+              <li>URP (Universal Render Pipeline)</li>
+              <li>ProBuilder</li>
+              <li>Spatial Puzzle Systems</li>
+              <li>Game Architecture</li>
+            </ul>
+            <details class="project-details">
+              <summary>Project notes <span aria-hidden="true">+</span></summary>
+              <div class="details-content">
+                <p>• Developed a 6-level escape puzzle game with levels including interactive objects, puzzle logic,
+                  popup interactions and game-over events, ragebaiting the player throughout the gameplay.</p>
+                <p>• Engineered modular room architecture using ProBuilder with custom URP post-processing, atmospheric
+                  volumetric lighting and spatial audio cues.</p>
+                <p>• Built custom C# state managers for inventory inspection, interactive clue mechanisms and dynamic
+                  environmental triggers.</p>
+              </div>
+            </details>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="interlude" id="interludeSection" data-scroll="zoom-out" aria-label="Engineering and visual craft">
+      <div class="interlude-graphic" data-parallax-speed="0.22" aria-hidden="true">
+        <canvas id="interludeCanvas"></canvas>
+        <span class="interlude-label"> <i>Feel the waves</i> </span>
+      </div>
+      <p class="interlude-text" id="interludeText" data-scroll="blur-in">Good software works.<br><em>Great software
+          welcomes you in.</em></p>
+    </section>
+
+    <section class="about section-shell section-space" id="about" aria-labelledby="aboutTitle">
+      <div class="section-heading" data-scroll="fade-up">
+        <div>
+          <p class="section-index"><span>02</span> / A LITTLE CONTEXT</p>
+          <h2 id="aboutTitle">Curious by <em>nature.</em></h2>
+        </div>
+        <p class="section-aside">Engineering is the toolkit. Curiosity is what I bring to the brief.</p>
+      </div>
+      <div class="about-layout">
+        <div class="about-statement" data-scroll="slide-left"><span class="about-quote-mark" aria-hidden="true">"</span>
+          <p>If it's unnecessarily complicated, that's a skill issue. <em>less yap, more shipped</em></p>
+        </div>
+        <div class="about-cards-col" data-scroll="slide-right">
+          <div class="about-card about-card-one" data-border-glow>
+            <div class="about-card-header">
+              <span class="about-card-badge">01 / PHILOSOPHY &amp; CRAFT</span>
+
+            </div>
+            <div class="scrambled-text" data-scramble-text data-radius="110" data-duration="1.2" data-speed="0.55"
+              data-scramble-chars=".:.:/\*#+">
+              <p>My work spans software engineering, web development and visual communication. I enjoy following an idea
+                from its underlying logic to the moment it meets the person using it.</p>
+            </div>
+          </div>
+          <div class="about-card about-card-two" data-border-glow>
+            <div class="about-card-header">
+              <span class="about-card-badge">02 / BACKGROUND &amp; ROOTS</span>
+
+            </div>
+            <div class="scrambled-text" data-scramble-text data-radius="110" data-duration="1.2" data-speed="0.55"
+              data-scramble-chars=".:.:/\*#+">
+              <p>My background includes software engineering studies at Gift University, enterprise systems through an
+                ERP internship and freelance creative work.</p>
+            </div>
+            <div class="about-facts" data-scroll="stagger">
+              <div><span>01 / BASE</span><strong>Gujranwala, Pakistan</strong></div>
+              <div><span>02 / EDUCATION</span><strong>Software Engineering<br>Gift University</strong></div>
+              <div><span>03 / OUTSIDE THE EDITOR</span><strong>Film, photography, visual design</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="breakout-section" id="breakoutGame" data-scroll="zoom-in" aria-labelledby="breakoutHeading">
+      <div class="section-shell">
+        <div class="breakout-topbar">
+          <span class="breakout-tagline" id="breakoutHeading">Have a lil fun.... :) </span>
+          <div class="breakout-status">
+            <span class="breakout-score" id="breakoutScore">BLOCKS: 0 / 106</span>
+            <div class="breakout-lives" id="breakoutLives" aria-label="3 Attempts remaining">
+              <span class="life-dot active" id="lifeDot1"></span>
+              <span class="life-dot active" id="lifeDot2"></span>
+              <span class="life-dot active" id="lifeDot3"></span>
+            </div>
+          </div>
+        </div>
+        <div class="breakout-container" id="breakoutContainer">
+          <canvas id="breakoutCanvas" width="920" height="480"></canvas>
+          <div class="breakout-overlay" id="breakoutOverlay" style="display: none;">
+            <p class="breakout-overlay-title" id="breakoutOverlayTitle">Attempt 1 Lost</p>
+            <p class="breakout-overlay-sub" id="breakoutOverlaySub">Click to launch ball</p>
+            <button type="button" class="breakout-btn" id="breakoutActionBtn">Launch Ball</button>
+          </div>
+          <div class="breakout-hint-bottom" id="breakoutHint">MOVE CURSOR TO SLIDE PADDLE · CLICK TO LAUNCH</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience section-shell section-space" aria-labelledby="experienceTitle">
+      <div class="section-heading compact-heading" data-scroll="fade-up">
+        <div>
+          <p class="section-index"><span>03</span> / EXPERIENCE</p>
+          <h2 id="experienceTitle">Work in <em>progress.</em></h2>
+        </div>
+      </div>
+      <div class="experience-list">
+        <article class="experience-item"><span class="experience-date">OCT TO NOV 2024</span>
+          <div>
+            <h3>ERP Intern <span>· GEPCO ERP Directorate</span></h3>
+            <p>Worked with SAP S/4HANA modules including FICO, MM and HRM and learned about ERP customization
+              alongside ABAP developers from Abacus.</p>
+          </div><span class="experience-location">GUJRANWALA, PK</span>
+        </article>
+        <article class="experience-item"><span class="experience-date">ONGOING</span>
+          <div>
+            <h3>Freelance Creative &amp; Social Media Work</h3>
+            <p>Manage social media and create visual content for local organizations, bringing together communication,
+              design and practical delivery, <b>making the brands pass vibe check.</b></p>
+          </div><span class="experience-location">INDEPENDENT</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="toolkit section-shell section-space" id="toolkit" aria-labelledby="toolkitTitle">
+      <div class="section-heading" data-scroll="fade-up">
+        <div>
+          <p class="section-index"><span>04</span> / TECHNICAL &amp; CREATIVE ARSENAL</p>
+          <h2 id="toolkitTitle">A full-spectrum <em>stack.</em></h2>
+        </div>
+        <p class="section-aside">From deep algorithmic systems and AI models to cinematic visual direction.</p>
+      </div>
+
+      <div class="toolkit-nav" data-scroll="fade-up" role="tablist" aria-label="Skill categories">
+        <button type="button" class="toolkit-tab-btn active" data-filter="all">All Disciplines</button>
+        <button type="button" class="toolkit-tab-btn" data-filter="languages">Languages</button>
+        <button type="button" class="toolkit-tab-btn" data-filter="frontend">Frontend &amp; Mobile</button>
+        <button type="button" class="toolkit-tab-btn" data-filter="backend">Backend &amp; DB</button>
+        <button type="button" class="toolkit-tab-btn" data-filter="ai">AI / ML &amp; Vision</button>
+        <button type="button" class="toolkit-tab-btn" data-filter="engines">3D, Game &amp; Tools</button>
+        <button type="button" class="toolkit-tab-btn" data-filter="enterprise">ERP &amp; Architecture</button>
+        <button type="button" class="toolkit-tab-btn" data-filter="creative">Creative &amp; Media</button>
+      </div>
+
+      <div class="toolkit-cards-grid">
+        
+        <div class="toolkit-card" data-category="languages">
+          <div class="toolkit-card-header">
+            <span class="toolkit-number">01</span>
+            <span class="toolkit-cat-badge">CORE</span>
+          </div>
+          <h3>Programming Languages</h3>
+          <p>Polyglot foundations across typed systems, scripting, systems programming and database query layers.</p>
+          <ul class="skills-pill-list">
+            <li><span class="skill-dot"></span>Python</li>
+            <li><span class="skill-dot"></span>Java</li>
+            <li><span class="skill-dot"></span>JavaScript (ESNext)</li>
+            <li><span class="skill-dot"></span>TypeScript</li>
+            <li><span class="skill-dot"></span>C</li>
+            <li><span class="skill-dot"></span>C#</li>
+            <li><span class="skill-dot"></span>PHP</li>
+            <li><span class="skill-dot"></span>SQL</li>
+          </ul>
+        </div>
+
+        <div class="toolkit-card" data-category="frontend">
+          <div class="toolkit-card-header">
+            <span class="toolkit-number">02</span>
+            <span class="toolkit-cat-badge">INTERFACES</span>
+          </div>
+          <h3>Frontend &amp; Mobile</h3>
+          <p>Building high-performance native apps, modern SPAs and design-engineered user experiences.</p>
+          <ul class="skills-pill-list">
+            <li><span class="skill-dot"></span>React &amp; React 19</li>
+            <li><span class="skill-dot"></span>React Native (Expo)</li>
+            <li><span class="skill-dot"></span>Vite</li>
+            <li><span class="skill-dot"></span>Tailwind CSS</li>
+            <li><span class="skill-dot"></span>NativeWind</li>
+            <li><span class="skill-dot"></span>HTML5 &amp; Semantic Web</li>
+            <li><span class="skill-dot"></span>Modern Vanilla CSS</li>
+            <li><span class="skill-dot"></span>Figma Design Systems</li>
+          </ul>
+        </div>
+
+        <div class="toolkit-card" data-category="backend">
+          <div class="toolkit-card-header">
+            <span class="toolkit-number">03</span>
+            <span class="toolkit-cat-badge">SYSTEMS</span>
+          </div>
+          <h3>Backend &amp; Databases</h3>
+          <p>Scalable REST endpoints, relational &amp; document data schemas and secure authentication flows.</p>
+          <ul class="skills-pill-list">
+            <li><span class="skill-dot"></span>Node.js</li>
+            <li><span class="skill-dot"></span>Express.js</li>
+            <li><span class="skill-dot"></span>PHP</li>
+            <li><span class="skill-dot"></span>MongoDB</li>
+            <li><span class="skill-dot"></span>MySQL</li>
+            <li><span class="skill-dot"></span>SQLite</li>
+            <li><span class="skill-dot"></span>phpMyAdmin</li>
+            <li><span class="skill-dot"></span>RESTful APIs</li>
+            <li><span class="skill-dot"></span>JWT &amp; OAuth/PKCE</li>
+          </ul>
+        </div>
+
+        <div class="toolkit-card" data-category="ai">
+          <div class="toolkit-card-header">
+            <span class="toolkit-number">04</span>
+            <span class="toolkit-cat-badge">INTELLIGENCE</span>
+          </div>
+          <h3>AI / ML &amp; Computer Vision</h3>
+          <p>Deep learning models, computer vision pipelines, image classification and reinforcement learning.</p>
+          <ul class="skills-pill-list">
+            <li><span class="skill-dot"></span>TensorFlow &amp; Keras</li>
+            <li><span class="skill-dot"></span>Convolutional Neural Networks (CNNs)</li>
+            <li><span class="skill-dot"></span>scikit-learn</li>
+            <li><span class="skill-dot"></span>OpenCV</li>
+            <li><span class="skill-dot"></span>MediaPipe Hand &amp; Pose</li>
+            <li><span class="skill-dot"></span>OCR Engines</li>
+            <li><span class="skill-dot"></span>Reinforcement Learning (MDP)</li>
+            <li><span class="skill-dot"></span>Value &amp; Policy Iteration</li>
+            <li><span class="skill-dot"></span>ANN &amp; LSTM Concepts</li>
+          </ul>
+        </div>
+
+        <div class="toolkit-card" data-category="engines">
+          <div class="toolkit-card-header">
+            <span class="toolkit-number">05</span>
+            <span class="toolkit-cat-badge">ENGINEERING</span>
+          </div>
+          <h3>Tools, 3D &amp; Engines</h3>
+          <p>Interactive 3D environments, game engines, version control and scientific Python toolchains.</p>
+          <ul class="skills-pill-list">
+            <li><span class="skill-dot"></span>Unity 6 (C#, URP)</li>
+            <li><span class="skill-dot"></span>ProBuilder Level Design</li>
+            <li><span class="skill-dot"></span>PyOpenGL &amp; GLSL Shaders</li>
+            <li><span class="skill-dot"></span>Git &amp; GitHub</li>
+            <li><span class="skill-dot"></span>Jupyter Notebooks</li>
+            <li><span class="skill-dot"></span>Streamlit ML Apps</li>
+            <li><span class="skill-dot"></span>tkinter Desktop GUI</li>
+          </ul>
+        </div>
+
+        <div class="toolkit-card" data-category="enterprise">
+          <div class="toolkit-card-header">
+            <span class="toolkit-number">06</span>
+            <span class="toolkit-cat-badge">ENTERPRISE</span>
+          </div>
+          <h3>ERP &amp; Architecture</h3>
+          <p>Enterprise business software customization, financial &amp; HR workflows and rigorous engineering.</p>
+          <ul class="skills-pill-list">
+            <li><span class="skill-dot"></span>SAP S/4HANA</li>
+            <li><span class="skill-dot"></span>FICO (Financial Accounting)</li>
+            <li><span class="skill-dot"></span>MM (Materials Management)</li>
+            <li><span class="skill-dot"></span>HRM (Human Resource)</li>
+            <li><span class="skill-dot"></span>ABAP Exposure</li>
+            <li><span class="skill-dot"></span>Object-Oriented Design (OOP)</li>
+            <li><span class="skill-dot"></span>DSA (BFS, DFS, UCS, HashMaps)</li>
+            <li><span class="skill-dot"></span>SDLC &amp; Software Quality Assurance (SQA)</li>
+            <li><span class="skill-dot"></span>Software Reengineering &amp; Docs</li>
+          </ul>
+        </div>
+
+        <div class="toolkit-card" data-category="creative">
+          <div class="toolkit-card-header">
+            <span class="toolkit-number">07</span>
+            <span class="toolkit-cat-badge">VISUAL CRAFT</span>
+          </div>
+          <h3>Creative Tools &amp; Motion</h3>
+          <p>Professional video editing, color grading, motion graphics, graphic design and cinematography.</p>
+          <ul class="skills-pill-list">
+            <li><span class="skill-dot"></span>Adobe After Effects</li>
+            <li><span class="skill-dot"></span>Final Cut Pro</li>
+            <li><span class="skill-dot"></span>DaVinci Resolve</li>
+            <li><span class="skill-dot"></span>Adobe Premiere Pro</li>
+            <li><span class="skill-dot"></span>Photoshop &amp; Lightroom</li>
+            <li><span class="skill-dot"></span>Canva &amp; Figma</li>
+            <li><span class="skill-dot"></span>Photography &amp; Cinematography</li>
+            <li><span class="skill-dot"></span>Graphic Design</li>
+          </ul>
+        </div>
+
+        <div class="toolkit-card" data-category="creative">
+          <div class="toolkit-card-header">
+            <span class="toolkit-number">08</span>
+            <span class="toolkit-cat-badge">DELIVERY</span>
+          </div>
+          <h3>Marketing &amp; Operations</h3>
+          <p>Translating technical products into compelling messaging, operational clarity and brand growth.</p>
+          <ul class="skills-pill-list">
+            <li><span class="skill-dot"></span>Social Media Marketing</li>
+            <li><span class="skill-dot"></span>Content Creation &amp; Strategy</li>
+            <li><span class="skill-dot"></span>Social Media Management</li>
+            <li><span class="skill-dot"></span>Advanced MS Excel</li>
+            <li><span class="skill-dot"></span>MS Visio (System Diagrams)</li>
+            <li><span class="skill-dot"></span>MS Word &amp; PowerPoint</li>
+            <li><span class="skill-dot"></span>Project Management</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="certifications section-shell section-space" id="certifications"
+      aria-labelledby="certificationsTitle">
+      <div class="section-heading" data-scroll="fade-up">
+        <div>
+          <p class="section-index"><span>05</span> / CERTIFICATIONS &amp; ACCREDITATIONS</p>
+          <h2 id="certificationsTitle">Validated <em>foundations.</em></h2>
+        </div>
+        <p class="section-aside">Locked in and Loaded....
+        </p>
+      </div>
+
+      <div class="certifications-grid">
+        
+        <div class="cert-card" data-issuer="adobe">
+          <div class="cert-header">
+            <span class="cert-badge cert-adobe">ADOBE</span>
+            <span class="cert-type">PROFESSIONAL</span>
+          </div>
+          <h3>Adobe Graphic Designer Professional Certificate</h3>
+          <p>Comprehensive design systems, vector illustration, visual composition and digital craft.</p>
+        </div>
+
+        <div class="cert-card" data-issuer="adobe">
+          <div class="cert-header">
+            <span class="cert-badge cert-adobe">ADOBE</span>
+            <span class="cert-type">AI &amp; DESIGN</span>
+          </div>
+          <h3>Design Fundamentals with AI</h3>
+          <p>Integrating generative machine learning models and computational workflows into visual design.</p>
+        </div>
+
+        <div class="cert-card" data-issuer="adobe">
+          <div class="cert-header">
+            <span class="cert-badge cert-adobe">ADOBE</span>
+            <span class="cert-type">CREATIVE TECH</span>
+          </div>
+          <h3>Generative AI Content Creation</h3>
+          <p>Prompt engineering, latent image synthesis and ethical generative media workflows.</p>
+        </div>
+
+        <div class="cert-card" data-issuer="microsoft">
+          <div class="cert-header">
+            <span class="cert-badge cert-ms">MICROSOFT</span>
+            <span class="cert-type">HUMAN INTERFACE</span>
+          </div>
+          <h3>Fundamentals of UI/UX Design</h3>
+          <p>Information architecture, user research, wireframing, heuristic evaluation and interaction principles.</p>
+        </div>
+
+        <div class="cert-card" data-issuer="google">
+          <div class="cert-header">
+            <span class="cert-badge cert-google">GOOGLE CLOUD</span>
+            <span class="cert-type">CLOUD &amp; DATA</span>
+          </div>
+          <h3>Data Analytics in Google Cloud</h3>
+          <p>BigQuery, cloud data pipelines, SQL analytics, data warehousing and business intelligence.</p>
+        </div>
+
+        <div class="cert-card" data-issuer="deeplearning">
+          <div class="cert-header">
+            <span class="cert-badge cert-dl">DEEPLEARNING.AI</span>
+            <span class="cert-type">AI FOUNDATIONS</span>
+          </div>
+          <h3>AI For Everyone</h3>
+          <p>Deep learning fundamentals, neural networks, ML project lifecycles and technical strategy.</p>
+        </div>
+
+        <div class="cert-card" data-issuer="sap">
+          <div class="cert-header">
+            <span class="cert-badge cert-sap">SAP</span>
+            <span class="cert-type">ENTERPRISE</span>
+          </div>
+          <h3>SAP Professional Fundamentals</h3>
+          <p>Enterprise resource planning architecture, business processes and S/4HANA core ecosystem.</p>
+        </div>
+
+        <div class="cert-card" data-issuer="imperial">
+          <div class="cert-header">
+            <span class="cert-badge cert-imperial">IMPERIAL COLLEGE LONDON</span>
+            <span class="cert-type">INNOVATION</span>
+          </div>
+          <h3>Introduction to Creative Thinking</h3>
+          <p>Systemic problem formulation, divergent thinking, heuristic synthesis and inventive design.</p>
+        </div>
+
+        <div class="cert-card" data-issuer="deloitte">
+          <div class="cert-header">
+            <span class="cert-badge cert-deloitte">DELOITTE</span>
+            <span class="cert-type">ANALYTICAL</span>
+          </div>
+          <h3>Critical Thinking</h3>
+          <p>Analytical problem decomposition, cognitive bias mitigation and structured decision architecture.</p>
+        </div>
+
+        <div class="cert-card" data-issuer="adobe">
+          <div class="cert-header">
+            <span class="cert-badge cert-adobe">ADOBE</span>
+            <span class="cert-type">VISUAL CRAFT</span>
+          </div>
+          <h3>Graphic Design</h3>
+          <p>Visual hierarchy, typography systems, grid foundations and brand identity architecture.</p>
+        </div>
+
+        <div class="cert-card" data-issuer="adobe">
+          <div class="cert-header">
+            <span class="cert-badge cert-adobe">ADOBE</span>
+            <span class="cert-type">DIGITAL MEDIA</span>
+          </div>
+          <h3>Image Editing</h3>
+          <p>Advanced non-destructive raster compositing, color correction and dynamic image finishing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="vt-section" id="creative" aria-labelledby="vtHeroTitle">
+      <div class="vt-viewport" id="vtViewport">
+        
+        <div class="vt-flower-stage" id="vtFlowerStage">
+          <canvas id="flower3dCanvas" class="flower-3d-canvas"
+            aria-label="Interactive 3D clustered bit flower"></canvas>
+          <div class="flower-ambient-glow" aria-hidden="true"></div>
+        </div>
+        <div class="vt-vignette" aria-hidden="true"></div>
+
+        <div class="vt-header">
+          <div class="vt-brand">
+            <span class="vt-brand-index">06</span>
+            <span class="vt-brand-title">VISUAL CRAFT &amp; MOTION</span>
+          </div>
+          <div class="vt-time-panel">
+            <span class="vt-time-label">Interactive 3D Voxel Flower</span>
+            <span class="vt-time-val" id="flowerStatusLabel">Assembling 2,400 Bits</span>
+          </div>
+        </div>
+
+        <div class="vt-hero">
+          <div class="vt-hero-content" data-scroll="slide-right">
+            <h2 class="vt-hero-title" id="vtHeroTitle">
+              <span class="vt-line vt-line-one"><span class="vt-line-reveal">Visual Craft.</span></span>
+              <span class="vt-line vt-line-two"><span class="vt-line-reveal">Framed In Motion.</span></span>
+            </h2>
+            <p class="vt-hero-copy">
+              Cinematography, visual effects and generative 3D art —<br>
+              interactive clustered bits that coalesce into form as you explore.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section-shell" id="contact" aria-labelledby="contactTitle">
+      <div class="contact-panel" data-scroll="zoom-in">
+        <div class="contact-topline"><span>07 / YOUR TURN</span><span class="contact-orbit" aria-hidden="true">↗</span>
+        </div>
+        <div class="contact-main">
+          <div class="contact-copy">
+            <h2 id="contactTitle">Have a good<br><em>problem?</em></h2>
+            <p>I'm always interested in thoughtful ideas, useful software and people who care about the details.</p><a
+              class="contact-email" href="mailto:ibrahimiyaz567@yahoo.com">ibrahimiyaz567@yahoo.com <span
+                aria-hidden="true">↗</span></a><a class="contact-linkedin"
+              href="https://www.linkedin.com/in/ibrahim-iyaz" target="_blank" rel="noopener noreferrer">Find me on
+              LinkedIn <span aria-hidden="true">↗</span></a>
+          </div>
+          <form class="contact-form" id="contactForm">
+            <p class="form-title">Write a note <span>MAILTO / NO BACKEND</span></p><label for="contactName">Your
+              name</label><input id="contactName" name="name" autocomplete="name" maxlength="100" placeholder="Name"
+              required><label for="contactEmail">Your email</label><input id="contactEmail" name="email" type="email"
+              autocomplete="email" maxlength="254" placeholder="you@example.com" required><label
+              for="contactMessage">What's on your mind?</label><textarea id="contactMessage" name="message" rows="3"
+              maxlength="2000" placeholder="A project, a question, or just hello..." required></textarea><button
+              class="button button-light" type="submit">Open email draft <span aria-hidden="true">↗</span></button>
+            <p class="form-note" id="formStatus" role="status" aria-live="polite">This opens your mail app. You can
+              review and send the note there.</p><noscript>
+              <p class="form-note">JavaScript is off. Use the email link on the left to get in touch.</p>
+            </noscript>
+          </form>
+        </div><span class="contact-watermark" data-parallax-speed="0.35" aria-hidden="true">HELLO</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell"><a class="footer-brand" href="#top">II<span> / ANYWAYS THAT WAS THE
+        LORE...BACK TO TOP ↑</span></a>
+    <p>Made with attention, from Gujranwala.</p>
+    <p>© <span id="year"></span>Ibrahim Iyaz</p>
+  </footer>
+
+  <div class="dock-container" id="dockContainer" role="region" aria-label="Interactive Navigation Dock">
+    <div class="dock dock--bottom" role="toolbar" aria-label="Quick Navigation">
+      
+      <button type="button" class="dock-item" data-target="#top" data-label="Home" aria-label="Home">
+        <span class="dock-tile">
+          <span class="dock-face">
+            <span class="glass-icon">
+              <span class="glass-icon-plate glass-icon-plate--tilt"
+                style="background: linear-gradient(135deg, hsl(236, 90%, 72%), hsl(246, 64%, 54%));"></span>
+              <span class="glass-icon-glass"><span class="glass-icon-shine"></span></span>
+              <span class="glass-icon-face">
+                <svg class="glass-icon-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                  <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+              </span>
+            </span>
+          </span>
+        </span>
+      </button>
+
+      <button type="button" class="dock-item" data-target="#work" data-label="Work" aria-label="Selected Work">
+        <span class="dock-tile">
+          <span class="dock-face">
+            <span class="glass-icon">
+              <span class="glass-icon-plate glass-icon-plate--tilt"
+                style="background: linear-gradient(135deg, hsl(214, 95%, 66%), hsl(226, 80%, 50%));"></span>
+              <span class="glass-icon-glass"><span class="glass-icon-shine"></span></span>
+              <span class="glass-icon-face">
+                <svg class="glass-icon-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </span>
+            </span>
+          </span>
+        </span>
+      </button>
+
+      <button type="button" class="dock-item" data-target="#about" data-label="About" aria-label="About Ibrahim">
+        <span class="dock-tile">
+          <span class="dock-face">
+            <span class="glass-icon">
+              <span class="glass-icon-plate glass-icon-plate--tilt"
+                style="background: linear-gradient(135deg, hsl(276, 84%, 70%), hsl(262, 66%, 52%));"></span>
+              <span class="glass-icon-glass"><span class="glass-icon-shine"></span></span>
+              <span class="glass-icon-face">
+                <svg class="glass-icon-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                </svg>
+              </span>
+            </span>
+          </span>
+        </span>
+      </button>
+
+      <button type="button" class="dock-item" data-target="#breakoutGame" data-label="Breakout"
+        aria-label="Play Breakout Arcade">
+        <span class="dock-tile">
+          <span class="dock-face">
+            <span class="glass-icon">
+              <span class="glass-icon-plate glass-icon-plate--tilt"
+                style="background: linear-gradient(135deg, hsl(14, 96%, 60%), hsl(340, 85%, 52%));"></span>
+              <span class="glass-icon-glass"><span class="glass-icon-shine"></span></span>
+              <span class="glass-icon-face">
+                <svg class="glass-icon-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="6" width="20" height="12" rx="6"></rect>
+                  <line x1="6" y1="12" x2="10" y2="12"></line>
+                  <line x1="8" y1="10" x2="8" y2="14"></line>
+                  <line x1="15" y1="13" x2="15.01" y2="13"></line>
+                  <line x1="18" y1="11" x2="18.01" y2="11"></line>
+                </svg>
+              </span>
+            </span>
+          </span>
+        </span>
+      </button>
+
+      <button type="button" class="dock-item" data-target="#toolkit" data-label="Toolkit"
+        aria-label="Technical Arsenal">
+        <span class="dock-tile">
+          <span class="dock-face">
+            <span class="glass-icon">
+              <span class="glass-icon-plate glass-icon-plate--tilt"
+                style="background: linear-gradient(135deg, hsl(38, 100%, 62%), hsl(20, 94%, 54%));"></span>
+              <span class="glass-icon-glass"><span class="glass-icon-shine"></span></span>
+              <span class="glass-icon-face">
+                <svg class="glass-icon-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                  <rect x="9" y="9" width="6" height="6"></rect>
+                  <line x1="9" y1="1" x2="9" y2="4"></line>
+                  <line x1="15" y1="1" x2="15" y2="4"></line>
+                  <line x1="9" y1="20" x2="9" y2="23"></line>
+                  <line x1="15" y1="20" x2="15" y2="23"></line>
+                  <line x1="20" y1="9" x2="23" y2="9"></line>
+                  <line x1="20" y1="14" x2="23" y2="14"></line>
+                  <line x1="1" y1="9" x2="4" y2="9"></line>
+                  <line x1="1" y1="14" x2="4" y2="14"></line>
+                </svg>
+              </span>
+            </span>
+          </span>
+        </span>
+      </button>
+
+      <button type="button" class="dock-item" data-target="#certifications" data-label="Certifications"
+        aria-label="Certifications">
+        <span class="dock-tile">
+          <span class="dock-face">
+            <span class="glass-icon">
+              <span class="glass-icon-plate glass-icon-plate--tilt"
+                style="background: linear-gradient(135deg, hsl(146, 66%, 54%), hsl(162, 82%, 34%));"></span>
+              <span class="glass-icon-glass"><span class="glass-icon-shine"></span></span>
+              <span class="glass-icon-face">
+                <svg class="glass-icon-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="8" r="6"></circle>
+                  <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+                </svg>
+              </span>
+            </span>
+          </span>
+        </span>
+      </button>
+
+      <button type="button" class="dock-item" data-target="#creative" data-label="Creative 3D"
+        aria-label="Creative 3D Visuals">
+        <span class="dock-tile">
+          <span class="dock-face">
+            <span class="glass-icon">
+              <span class="glass-icon-plate glass-icon-plate--tilt"
+                style="background: linear-gradient(135deg, hsl(184, 80%, 56%), hsl(196, 84%, 40%));"></span>
+              <span class="glass-icon-glass"><span class="glass-icon-shine"></span></span>
+              <span class="glass-icon-face">
+                <svg class="glass-icon-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m21 16-9 5-9-5V8l9-5 9 5v8Z"></path>
+                  <path d="m3.27 6.96 8.73 4.87 8.73-4.87"></path>
+                  <path d="M12 22V12"></path>
+                </svg>
+              </span>
+            </span>
+          </span>
+        </span>
+      </button>
+
+      <span class="dock-separator" aria-hidden="true"></span>
+
+      <button type="button" class="dock-item" data-target="#contact" data-label="Say Hello"
+        aria-label="Contact Ibrahim">
+        <span class="dock-tile">
+          <span class="dock-face">
+            <span class="glass-icon">
+              <span class="glass-icon-plate glass-icon-plate--tilt"
+                style="background: linear-gradient(135deg, hsl(326, 92%, 74%), hsl(314, 70%, 54%));"></span>
+              <span class="glass-icon-glass"><span class="glass-icon-shine"></span></span>
+              <span class="glass-icon-face">
+                <svg class="glass-icon-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </span>
+            </span>
+          </span>
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <div class="cursor-orb" id="cursorOrb" aria-hidden="true"></div>
+</body>
+
+</html>
