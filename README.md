@@ -157,7 +157,7 @@ Right-click on `index.html` and select **"Open with Live Server"**.
 ## ✦ Author
 
 **Muhammad Ibrahim Iyaz**
-- Portfolio: [Live Demo](https://ibrahimiyaz.com) *(or your deployed URL)*
+- Portfolio: [Live Demo](https://ibrahim-iyaz.github.io/Ibrahim-Portfolio/)
 - GitHub: [@ibrahimiyaz](https://github.com/ibrahim-iyaz)
 
 ---
